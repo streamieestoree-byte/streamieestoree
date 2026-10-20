@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="id" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>streamieestore ✶</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Fraunces:ital,wght@0,500;1,400&amp;display=swap">
+<style>
+:root{--bg:#F6F1E7;--bgt:rgba(246,241,231,.93);--card:#FFFCF5;--ink:#34392E;--mut:#6B5D4D;--line:#D9D2BF;--hd:#59614A;--ol:#59614A;--dk:#34392E;--sg:#A7AE91;--bt:#E9D99B;--im:rgba(233,217,155,.4);--f:'DM Sans',system-ui,sans-serif;--s:'Fraunces',Georgia,serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#23261E;--bgt:rgba(35,38,30,.93);--card:#2C3025;--ink:#F6F1E7;--mut:#C9BFAA;--line:#464C3B;--hd:#C9CFB4;--im:rgba(233,217,155,.14)}}
+:root[data-theme=dark]{--bg:#23261E;--bgt:rgba(35,38,30,.93);--card:#2C3025;--ink:#F6F1E7;--mut:#C9BFAA;--line:#464C3B;--hd:#C9CFB4;--im:rgba(233,217,155,.14)}
+html{height:100%;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.55 var(--f)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bgt)}
+h1,h2,h3,h4{font-family:var(--s);font-weight:500;line-height:1.15;margin:0;color:var(--hd)}
+h4{font-family:var(--f);font-size:.95rem;font-weight:700;color:var(--ink)}
+a{color:inherit}.w{max-width:1080px;margin:0 auto;padding:0 18px}
+.gh{background-color:var(--ol);background-image:linear-gradient(90deg,rgba(255,255,255,.09) 50%,transparent 50%),linear-gradient(rgba(255,255,255,.09) 50%,transparent 50%);background-size:28px 28px;color:#F6F1E7}
+.gl{background-color:var(--card);background-image:linear-gradient(90deg,rgba(167,174,145,.28) 50%,transparent 50%),linear-gradient(rgba(167,174,145,.28) 50%,transparent 50%);background-size:20px 20px}
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bgt);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;min-height:56px;flex-wrap:wrap}
+.br{font:italic 1.3rem var(--s);color:var(--hd);text-decoration:none}.br i{color:#C9B25E;font-style:normal}
+.mm{min-height:44px;padding:0 14px;background:none;border:1.5px solid var(--hd);color:var(--hd);border-radius:6px;font:700 .9rem var(--f)}
+#nv{display:none;width:100%;padding:6px 0 12px}.hd.o #nv{display:flex;flex-direction:column}
+#nv a{padding:11px 0;text-decoration:none;font-weight:500;border-bottom:1px dashed var(--line)}
+@media(min-width:760px){.mm{display:none}#nv,.hd.o #nv{display:flex;flex-direction:row;width:auto;gap:24px;padding:0}#nv a{border:0;padding:4px 0}#nv a:hover{text-decoration:underline;text-decoration-color:var(--sg);text-underline-offset:6px}}
+.hero{padding:44px 0 52px;position:relative;overflow:hidden}
+.hero .w{position:relative}.sm0{font-size:.95rem;letter-spacing:.04em;color:#fff;text-shadow:0 0 14px rgba(255,255,255,.75);margin:0 0 8px}
+.stars{color:var(--bt);letter-spacing:.4em;font-size:.9rem}
+.hero h1{color:#FFFCF5;font-size:clamp(2.2rem,8vw,3.8rem);font-style:italic;text-shadow:0 0 22px rgba(255,255,255,.3);max-width:15ch}
+.sub{font:1.15rem var(--s);margin:14px 0 6px;color:var(--bt)}.dsc{max-width:52ch;margin:0 0 24px;opacity:.95}
+.bt{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:6px;font:700 .95rem var(--f);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 3px 0 rgba(0,0,0,.18)}.btn:disabled{opacity:.6;cursor:wait}
+.y{background:var(--bt);color:#34392E}.o{border-color:#F6F1E7;color:#F6F1E7}.s{background:var(--ol);color:#FFFCF5}
+:focus-visible{outline:3px solid #C9B25E;outline-offset:2px}
+section.sec{padding:52px 0}.sec h2{font-size:clamp(1.9rem,6vw,2.6rem)}.sec h2 em{font-style:italic}
+.lead{font:italic 1.1rem var(--s);color:var(--mut);margin:6px 0 22px}
+.fnd{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+#sq,.fm input,.fm select,.fm textarea{width:100%;min-height:46px;padding:10px 14px;border:1.5px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#chips{display:flex;flex-wrap:wrap;gap:8px}
+.cp{min-height:40px;padding:0 16px;border:1.5px solid var(--hd);background:none;color:var(--hd);border-radius:999px;font:500 .9rem var(--f);cursor:pointer}
+.cp.on{background:var(--hd);color:var(--bg);font-weight:700}
+#list{column-width:330px;column-gap:20px}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:0 18px 12px;margin:0 0 20px;break-inside:avoid;overflow:hidden;transition:transform .2s}
+.cd:hover{transform:translateY(-2px)}
+.cd::before{content:"";display:block;height:12px;margin:0 -18px 14px;background-color:var(--sg);background-image:linear-gradient(90deg,rgba(255,255,255,.35) 50%,transparent 50%),linear-gradient(rgba(255,255,255,.35) 50%,transparent 50%);background-size:12px 12px}
+.hh{display:flex;align-items:center;gap:12px;margin-bottom:10px}.hh h3{font-size:1.5rem}
+.gly{flex:none;width:40px;height:40px;border-radius:50%;background:var(--hd);color:var(--bg);display:grid;place-items:center;font:italic 500 1rem var(--s)}
+.im{background:var(--im);border-left:4px solid #C9B25E;padding:10px 12px;margin:0 0 8px;font-size:.92rem;border-radius:0 4px 4px 0}
+.im b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.gp{margin-top:14px}.gp h4{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-bottom:4px;border-bottom:2px solid var(--hd)}
+.tg{font:700 .66rem var(--f);letter-spacing:.09em;padding:2px 7px;border:1.5px solid var(--hd);color:var(--hd);border-radius:3px}
+.gn{margin:6px 0 0;font-size:.88rem;color:var(--mut);font-style:italic}
+.r{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;padding:9px 0;border-top:1px dashed var(--line)}.gp .r:first-of-type{border-top:0}
+.d{flex:1 1 120px;font-weight:500}.p{font-size:1.1rem;font-weight:700;color:var(--hd);white-space:nowrap}.p.ak{font:italic 500 1rem var(--s);color:var(--mut)}
+.b{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:6px;background:var(--ol);color:#FFFCF5;font:700 .82rem var(--f);text-decoration:none}.b:hover{background:var(--dk)}
+.n{flex-basis:100%;margin:0;font-size:.86rem;color:var(--mut)}
+.em{padding:32px;text-align:center;border:1.5px dashed var(--sg);border-radius:6px;column-span:all}
+.steps{display:grid;gap:22px;margin-top:26px}@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.st{border-top:2px solid var(--hd);padding-top:10px}.st b{display:block;font:italic 3rem/1 var(--s);color:var(--hd)}.st h3{font-size:1.3rem;margin:6px 0}.st p{margin:0;color:var(--mut)}
+.pf{padding:34px 22px;border:1px solid var(--line);border-radius:6px;text-align:center}.pf p{margin:8px 0 20px;color:var(--mut)}
+.ct{padding:44px 0;text-align:center}.ct h2{color:#FFFCF5}.ct p{max-width:50ch;margin:10px auto 22px}.ct .bt{justify-content:center}
+.ft{padding:30px 0 34px;text-align:center}.ft a{margin:0 10px}.ft p{margin:6px 0}
+.orn{color:#C9B25E}
+/* admin */
+.ah{padding:12px 0}.ah .w{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.ah b{font:italic 1.2rem var(--s)}.ah small{font:500 .75rem var(--f);letter-spacing:.1em;text-transform:uppercase}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}.tabs button{min-height:40px;padding:0 12px;background:none;border:1.5px solid rgba(246,241,231,.5);color:#F6F1E7;border-radius:6px;font:500 .85rem var(--f);cursor:pointer}.tabs button.on{background:var(--bt);color:#34392E;border-color:var(--bt)}
+#am{padding-top:24px;padding-bottom:110px}#am h2{font-size:2rem;margin-bottom:14px}
+.sg{display:grid;gap:14px}@media(min-width:640px){.sg{grid-template-columns:repeat(3,1fr)}}
+.sc{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:6px}.sc b{display:block;font:500 2.4rem var(--s);color:var(--hd)}.sc small{display:block;color:var(--mut)}
+.mu{color:var(--mut)}.tb{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.tb>*{flex:1 1 180px}
+ul.al{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:10px}
+.ai{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px}
+.ai>div:first-child{flex:1 1 220px;min-width:0;overflow-wrap:anywhere}.ai.off{opacity:.75;border-style:dashed}
+.pl{font:700 .68rem var(--f);letter-spacing:.08em;padding:2px 7px;border:1.5px solid var(--line);border-radius:3px;font-style:normal;text-transform:uppercase}
+.ab{display:flex;gap:6px;flex-wrap:wrap}.sx{min-height:40px;padding:0 12px;border:1.5px solid var(--hd);background:none;color:var(--hd);border-radius:6px;font:700 .8rem var(--f);cursor:pointer}.sx.dg{border-color:#B0432F;color:#B0432F}
+:root[data-theme=dark] .sx.dg{color:#F0A08F;border-color:#F0A08F}
+.mb{position:fixed;inset:0;z-index:50;background:rgba(30,33,25,.6);display:grid;place-items:center;padding:14px;overflow:auto}
+.mdl{background:var(--card);width:100%;max-width:520px;max-height:92vh;overflow:auto;padding:22px;border-radius:6px;border-top:12px solid var(--sg)}
+.mdl h3{margin-bottom:12px;font-size:1.6rem}.fm label,.fm fieldset{display:block;margin:0 0 12px;font-size:.88rem;font-weight:700;border:0;padding:0}.fm label input,.fm label select,.fm label textarea{margin-top:4px;font-weight:400}
+.fm label.in{display:inline-flex;gap:6px;align-items:center;margin-right:14px;font-weight:500}.fm label.in input{width:auto;min-height:0;margin:0}.g2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.ac{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:8px}.o2{border-color:var(--hd);color:var(--hd)}.dg2{background:#B0432F;color:#fff}
+.er{color:#B0432F;font-weight:700;margin:0 0 10px;min-height:0}:root[data-theme=dark] .er{color:#F0A08F}
+.pbar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));background:var(--hd);color:var(--bg);display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:none;background:var(--dk);color:#fff;padding:10px 16px;border-radius:6px;max-width:92vw}#toast.ts{display:block}#toast.er2{background:#B0432F}
+.gt{min-height:70vh;display:grid;place-items:center;padding:24px}.gc{background:var(--card);color:var(--ink);padding:28px;max-width:430px;border-radius:6px;text-align:center}.gc p{color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="app"></div><div id="ov"></div><div id="toast" role="status" aria-live="polite"></div>
+<script id="data" type="application/json">{"s":{"name":"streamieestore","head":"welcome to streamieestore!","sub":"your go-to for digital stuff","desc":"Menyediakan aplikasi digital premium dengan berbagai pilihan paket. Hubungi admin bila ada sesuatu yang ditanyakan.","wa":"6285136528880","tg":"https://t.me/streamieestore/51","foot":"thank you for stopping by!"},"c":[["nokos","Nokos","","","No",1,0],["youtube","YouTube","","","Yt",1,10],["netflix","Netflix","","Semua plan Netflix menggunakan akun admin. Wajib mengisi lokasi dan perangkat.","Nf",1,20],["hbo","HBO Max","","","Hb",1,30],["disney","Disney+ Hotstar","","","D+",1,40],["spotify","Spotify","","Jika menggunakan email buyer pada paket Indplan atau Famplan, ada tambahan Rp4.000 dan sistem wajib replace.","Sp",1,50],["apple","Apple Music","","Menggunakan iMessage buyer, tambah Rp1.000. Sistem mungkin replace.","Am",1,60],["canva","Canva Pro","","Akun dari buyer, email saja. Sistem menggunakan undangan melalui email atau link.","Cv",1,70],["capcut","CapCut","","","Cc",1,80],["alight","Alight Motion","","Akun dari admin. Jika menggunakan akun buyer, ada biaya admin Rp1.500. Akun email harus fresh.","Al",1,90],["lightroom","Lightroom","","","Lr",1,100]],"i":[["nokos","Telegram","Indonesia",9000,"verif","",1,0],["nokos","Telegram","Luar Negara",14500,"verif","",1,10],["nokos","WhatsApp","Indonesia",6500,"verif","No garansi.",1,20],["nokos","WhatsApp","Luar Negara",null,"","",1,30],["nokos","Nokos All Aplikasi","Indonesia",6000,"verif","Harga tergantung aplikasi.",1,40],["youtube","Famplan","1 Bulan",12000,"","Pakai akun admin +Rp1.500.",1,50],["youtube","Famplan","2 Bulan",22000,"","Pakai akun admin +Rp1.500.",1,60],["youtube","Indplan","1 Bulan",20000,"","",1,70],["youtube","Indplan","3 Bulan",33000,"","",1,80],["youtube","Mixplan","3 Bulan",null,"","Akun admin only.",1,90],["youtube","Mixplan","6 Bulan",null,"","Akun admin only.",1,100],["netflix","Sharing 1p1u","3 Hari",12000,"","",1,110],["netflix","Sharing 1p1u","7 Hari",20000,"","",1,120],["netflix","Sharing 1p1u","1 Bulan",45000,"","",1,130],["netflix","Sharing 1p2u","1 Bulan",30000,"","",1,140],["netflix","Private","1 Bulan",180000,"","",1,150],["netflix","Semi-Private","1 Bulan · 1p1u",60000,"","1 profil, bisa digunakan pada 2 perangkat.",1,160],["netflix","Semi-Private","1 Bulan · 1p2u",50000,"","2 profil, bisa digunakan pada 2 perangkat.",1,170],["hbo","Sharing","1 Bulan Standard",25000,"","",1,180],["hbo","Sharing","1 Bulan Ultimate",35000,"","",1,190],["hbo","Private","1 Bulan Standard",75000,"","",1,200],["hbo","Private","1 Bulan Ultimate",125000,"","",1,210],["disney","Plan Premium","1 Hari",7000,"","Random user ya.",1,220],["disney","Plan Premium","3 Hari",14000,"","Random user ya.",1,230],["disney","Plan Premium","5 Hari",17000,"","Random user ya.",1,240],["disney","Plan Premium","7 Hari",21500,"","Random user ya.",1,250],["disney","Plan Premium","1 Bulan · 6 User",35000,"","Random user ya.",1,260],["disney","Plan Premium","1 Bulan · 3 User",60000,"","Random user ya.",1,270],["disney","Private","1 Bulan · Plan Basic",68000,"","Akun dari admin. Batas 1 perangkat.",1,280],["disney","Private","1 Bulan · Plan Premium",155000,"","Akun dari admin. Batas 3 perangkat.",1,290],["spotify","Famplan","1 Bulan",25000,"","",1,300],["spotify","Famplan","2 Bulan",null,"","",1,310],["spotify","Indplan","1 Bulan · No Replace",45000,"","",1,320],["spotify","Indplan","1 Bulan · Replace",35000,"","",1,330],["spotify","Indplan","2 Bulan",null,"","",1,340],["apple","Famplan","1 Bulan",23000,"","",1,350],["apple","Famplan","2 Bulan",null,"","",1,360],["canva","Anggota Pro","1 Bulan",10000,"","",1,370],["canva","Anggota Pro","1 Tahun",32000,"","",1,380],["canva","Anggota Designer","1 Bulan",7500,"","",1,390],["canva","Anggota Designer","6 Bulan",17000,"","",1,400],["canva","Anggota Designer","1 Tahun",35000,"","",1,410],["canva","Admire Team","1 Bulan",15000,"","",1,420],["canva","Owner Plan","1 Bulan",20000,"","",1,430],["canva","Edu Lifetime","Selamanya",36000,"","",1,440],["capcut","Private","1 Minggu",25000,"","Akun dari admin.",1,450],["capcut","Private","2 Bulan",43000,"","Akun dari admin.",1,460],["alight","Sharing","1 Tahun",30000,"","",1,470],["alight","Private","1 Bulan",35000,"","",1,480],["lightroom","Full Preset","1 Tahun",40000,"","Pakai akun admin +Rp1.500.",1,490]]}</script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function load(){const r=JSON.parse($('#data').textContent);return{s:r.s,c:r.c.map((a,k)=>({id:a[0],name:a[1],desc:a[2],note:a[3],g:a[4],pub:a[5]??1,ord:a[6]??k*10})),i:r.i.map((a,k)=>({id:'i'+k,cat:a[0],type:a[1],dur:a[2],price:a[3],unit:a[4],note:a[5],pub:a[6]??1,ord:a[7]??k*10}))}}
+const ser=()=>JSON.stringify({s:D.s,c:D.c.map(x=>[x.id,x.name,x.desc,x.note,x.g,x.pub,x.ord]),i:D.i.map(x=>[x.cat,x.type,x.dur,x.price,x.unit,x.note,x.pub,x.ord])}).replace(/</g,'\\u003c');
+let D=load(),dirty=0,q='',cf='all',adm=location.hash=='#admin',av='ov',aq='',ac='all',can=0,fd=0,art;
+const by=(a,b)=>a.ord-b.ord,rp=n=>'Rp'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.'),wa=m=>`https://wa.me/${D.s.wa}?text=${encodeURIComponent(m)}`,cn=id=>(D.c.find(c=>c.id==id)||{}).name||'';
+const tag=(t,ps)=>/^sharing/i.test(t)?'SHARING':/^private/i.test(t)?'PRIVATE':/^famplan/i.test(t)?'FAMPLAN':/^indplan/i.test(t)?'INDPLAN':ps.every(p=>p==null)?'ASK ADMIN':'';
+const price=r=>r.price==null?'Tanya Admin':rp(r.price)+(r.unit?'/'+esc(r.unit):'');
+/* ---------- public ---------- */
+function row(c,r,sh){const a=r.price==null,m=a?`Halo admin ${D.s.name}! Aku mau tanya harga dan ketersediaan ${c.name} paket ${r.type}.`:`Halo admin ${D.s.name}! Aku mau tanya tentang ${c.name}, paket ${r.type}, durasi ${r.dur}. Apakah masih tersedia?`;
+return `<div class="r"><span class="d">${esc(r.dur)}</span><b class="p${a?' ak':''}">${price(r)}</b><a class="b" href="${wa(m)}" target="_blank" rel="noopener" aria-label="${a?'Tanya admin':'Order via WhatsApp'}: ${esc(c.name+' '+r.type+' '+r.dur)}">${a?'Ask Admin':'Order'}</a>${!sh&&r.note?`<p class="n">${esc(r.note)}</p>`:''}</div>`}
+function card(c,its){const G=new Map();its.forEach(i=>{if(!G.has(i.type))G.set(i.type,[]);G.get(i.type).push(i)});
+let h=`<article class="cd"><div class="hh"><span class="gly" aria-hidden="true">${esc(c.g)}</span><h3>${esc(c.name)}</h3></div>${c.desc?`<p class="gn">${esc(c.desc)}</p>`:''}${c.note?`<p class="im"><b>✶ Ketentuan</b>${esc(c.note)}</p>`:''}`;
+G.forEach((rs,t)=>{const sh=rs.every(r=>r.note&&r.note==rs[0].note),tg=tag(t,rs.map(r=>r.price));h+=`<section class="gp"><h4>${esc(t)}${tg?` <span class="tg">${tg}</span>`:''}</h4>${sh?`<p class="gn">${esc(rs[0].note)}</p>`:''}${rs.map(r=>row(c,r,sh)).join('')}</section>`});return h+'</article>'}
+function list(){const t=q.toLowerCase().split(/\s+/).filter(Boolean);let h='';
+[...D.c].sort(by).filter(c=>c.pub&&(cf=='all'||cf==c.id)).forEach(c=>{let its=D.i.filter(i=>i.cat==c.id&&i.pub).sort(by);
+if(t.length)its=its.filter(i=>{const s=(c.name+' '+c.note+' '+i.type+' '+i.dur+' '+i.note+' '+(i.price==null?'tanya admin':rp(i.price)+' '+i.price)+' '+i.unit).toLowerCase();return t.every(w=>s.includes(w))});
+if(its.length)h+=card(c,its)});
+$('#list').innerHTML=h||`<div class="em"><p>Couldn’t find it? Try another search or ask our admin.</p><a class="btn s" target="_blank" rel="noopener" href="${wa(q?`Halo admin ${D.s.name}! Aku cari "${q}" tapi belum ketemu di katalog. Apakah tersedia?`:`Halo admin ${D.s.name}! Aku mau tanya tentang produk yang tersedia.`)}">Ask Admin on WhatsApp</a></div>`}
+function chips(){$('#chips').innerHTML=[['all','All'],...[...D.c].sort(by).filter(c=>c.pub).map(c=>[c.id,c.name])].map(([i,n])=>`<button class="cp${cf==i?' on':''}" aria-pressed="${cf==i}" data-a="chip" data-id="${esc(i)}">${esc(n)}</button>`).join('')}
+function pg(){const s=D.s,W=`https://wa.me/${s.wa}`;return `
+<header class="hd"><div class="w"><a class="br" href="#home">${esc(s.name)} <i>✶</i></a><button class="mm" data-a="mm" aria-expanded="false" aria-controls="nv">Menu</button>
+<nav id="nv" aria-label="Utama"><a href="#home">Home</a><a href="#catalog">Catalog</a><a href="#how">How to Order</a><a href="#proof">Proof</a><a href="#contact">Contact</a>${can?'<a href="#admin">Admin</a>':''}</nav></div></header>
+<main><section id="home" class="hero gh"><div class="w"><p class="stars" aria-hidden="true">✦ ✶ ✦</p><p class="sm0">${esc(s.name)} ✶</p><h1>${esc(s.head)}</h1><p class="sub">${esc(s.sub)}</p><p class="dsc">${esc(s.desc)}</p>
+<div class="bt"><a class="btn y" href="#catalog">Explore Catalog</a><a class="btn o" href="${W}" target="_blank" rel="noopener">Chat Admin</a></div></div></section>
+<section id="catalog" class="sec"><div class="w"><h2>the <em>catalog</em></h2><p class="lead">find your little digital favorite.</p>
+<div class="fnd"><label class="vh" for="sq">Cari produk, paket, atau durasi</label><input id="sq" type="search" placeholder="Cari: Netflix, 1 Bulan, Canva…" autocomplete="off" value="${esc(q)}"><div id="chips" role="group" aria-label="Kategori"></div></div><div id="list"></div></div></section>
+<section id="how" class="sec"><div class="w"><h2>how to <em>order</em></h2><p class="lead">Ordering is simple.</p><div class="steps">
+<div class="st"><b>01</b><h3>Explore</h3><p>Jelajahi katalog dan pilih paket yang sesuai dengan kebutuhanmu.</p></div>
+<div class="st"><b>02</b><h3>Ask Admin</h3><p>Klik tombol WhatsApp untuk menanyakan ketersediaan atau detail paket.</p></div>
+<div class="st"><b>03</b><h3>Confirm</h3><p>Konfirmasikan pilihan paket dan ikuti arahan admin sebelum menyelesaikan pesanan.</p></div></div></div></section>
+<section id="proof" class="sec"><div class="w"><div class="pf gl"><h2>little proofs <span class="orn">♡</span></h2><p>A little look at our order proofs.</p><a class="btn s" href="${esc(s.tg)}" target="_blank" rel="noopener">See Order Proofs</a></div></div></section>
+<section id="contact" class="ct gh"><div class="w"><p class="stars" aria-hidden="true">✶</p><h2>have something in mind?</h2><p>Punya pertanyaan tentang paket atau ingin memastikan detail pesananmu? Hubungi admin untuk informasi lebih lanjut.</p>
+<div class="bt"><a class="btn y" href="${W}" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn o" href="${esc(s.tg)}" target="_blank" rel="noopener">View Order Proofs</a></div></div></section></main>
+<footer class="ft gh"><div class="w"><p class="br" style="color:#FFFCF5">${esc(s.name)} <i>✶</i></p><p>${esc(s.foot)}</p><p><a href="#catalog">Catalog</a><a href="${W}" target="_blank" rel="noopener">WhatsApp</a><a href="${esc(s.tg)}" target="_blank" rel="noopener">Order Proofs</a></p><p style="font-size:.85rem;opacity:.85">© ${new Date().getFullYear()} ${esc(s.name)}</p></div></footer>`}
+/* ---------- admin ---------- */
+const sorted=()=>{const cs=[...D.c].sort(by),ix=id=>cs.findIndex(c=>c.id==id);return D.i.filter(i=>(ac=='all'||i.cat==ac)&&(!aq||(cn(i.cat)+' '+i.type+' '+i.dur+' '+i.note).toLowerCase().includes(aq.toLowerCase()))).sort((a,b)=>ix(a.cat)-ix(b.cat)||a.ord-b.ord)};
+const alist=()=>sorted().map(i=>`<li class="ai${i.pub?'':' off'}"><div><b>${esc(cn(i.cat))}</b> · ${esc(i.type)}<br>${esc(i.dur)} — <strong>${price(i)}</strong> <em class="pl">${i.pub?'Aktif':'Nonaktif'}</em>${i.note?`<br><small class="mu">${esc(i.note)}</small>`:''}</div><div class="ab"><button class="sx" data-a="ie" data-id="${i.id}">Edit</button><button class="sx" data-a="it" data-id="${i.id}">${i.pub?'Hide':'Show'}</button><button class="sx dg" data-a="id" data-id="${i.id}">Delete</button></div></li>`).join('')||'<li class="mu">Tidak ada produk yang cocok.</li>';
+function ap(){if(!can)return `<div class="gt gh"><div class="gc"><h1>Admin streamieestore ✶</h1><p>Halaman ini hanya untuk pemilik toko. Buka halaman ini lewat akun claude.ai pemilik (yang punya akses edit), lalu verifikasi.</p><div class="ac" style="justify-content:center"><button class="btn s" data-a="vf">Verify access</button><button class="btn o2" data-a="ex">Back to shop</button></div></div></div>`;
+const cs=[...D.c].sort(by),N=D.i.filter(i=>i.pub&&D.c.some(c=>c.id==i.cat&&c.pub)).length;let b='';
+if(av=='ov')b=`<h2>Overview</h2><div class="sg"><div class="sc"><b>${D.c.length}</b>Total kategori<small>${D.c.filter(c=>c.pub).length} tampil</small></div><div class="sc"><b>${D.i.length}</b>Total paket<small>${D.i.filter(i=>i.pub).length} aktif</small></div><div class="sc"><b>${N}</b>Ditampilkan di katalog</div></div><p class="mu">Perubahan baru live setelah kamu menekan Publish changes. Jika halaman ditutup sebelum itu, draft hilang.</p>`;
+if(av=='mg')b=`<h2>Manage Catalog</h2><div class="ab"><button class="btn s" data-a="ia">+ Add Product</button><button class="btn o2" data-a="ca">+ Add Category</button></div><h3 style="margin:22px 0 10px">Kategori</h3><ul class="al">${cs.map((c,k)=>`<li class="ai${c.pub?'':' off'}"><div><b>${esc(c.name)}</b> <em class="pl">${c.pub?'Tampil':'Tersembunyi'}</em><br><small class="mu">${D.i.filter(i=>i.cat==c.id).length} paket</small></div><div class="ab"><button class="sx" data-a="cu" data-id="${c.id}" aria-label="Naikkan" ${k?'':'disabled'}>↑</button><button class="sx" data-a="cd" data-id="${c.id}" aria-label="Turunkan" ${k<cs.length-1?'':'disabled'}>↓</button><button class="sx" data-a="ce" data-id="${c.id}">Edit</button><button class="sx" data-a="ct" data-id="${c.id}">${c.pub?'Hide':'Show'}</button><button class="sx dg" data-a="cx" data-id="${c.id}">Delete</button></div></li>`).join('')}</ul>
+<h3 style="margin-bottom:6px">Produk</h3><div class="tb fm"><label class="vh" for="aq">Cari</label><input id="aq" type="search" placeholder="Cari produk…" value="${esc(aq)}"><label class="vh" for="ac">Kategori</label><select id="ac"><option value="all">Semua kategori</option>${cs.map(c=>`<option value="${c.id}"${ac==c.id?' selected':''}>${esc(c.name)}</option>`).join('')}</select></div><ul class="al" id="al">${alist()}</ul>`;
+if(av=='st'){const s=D.s,f=(k,l,t)=>`<label>${l}${t=='ta'?`<textarea name="${k}" rows="3" required>${esc(s[k])}</textarea>`:`<input name="${k}" required value="${esc(s[k])}">`}</label>`;
+b=`<h2>Settings</h2><form class="fm" data-f="set" style="max-width:560px"><p class="er" role="alert"></p>${f('name','Nama toko')}${f('head','Headline halaman utama')}${f('sub','Subheadline')}${f('desc','Deskripsi singkat toko','ta')}${f('wa','Nomor WhatsApp admin (contoh 6285136528880)')}${f('tg','Tautan bukti transaksi Telegram')}${f('foot','Teks footer')}<button class="btn s">Save Settings</button></form>`}
+return `<div class="ah gh"><div class="w"><b>${esc(D.s.name)} ✶ <small>admin</small></b><nav class="tabs" aria-label="Admin">${[['ov','Overview'],['mg','Manage Catalog'],['ad','Add Product'],['st','Settings']].map(([k,n])=>`<button data-a="nav" data-id="${k}"${av==k?' class="on" aria-current="page"':''}>${n}</button>`).join('')}<button data-a="ex">Exit admin</button></nav></div></div><main class="w" id="am">${b}</main>${dirty?`<div class="pbar"><span>Perubahan belum live.</span><button class="btn y" id="pb" data-a="pub">Publish changes</button></div>`:''}`}
+/* forms */
+function md(h){fd=0;$('#ov').innerHTML=`<div class="mb"><div class="mdl fm" role="dialog" aria-modal="true">${h}</div></div>`;const f=$('#ov input,#ov select,#ov button');f&&f.focus()}
+const cl=()=>{$('#ov').innerHTML='';fd=0},mark=m=>{dirty=1;render();toast(m)};
+function toast(m,b){const t=$('#toast');t.className=b?'ts er2':'ts';t.textContent=m;clearTimeout(toast.t);toast.t=setTimeout(()=>t.className='',3600)}
+function itemF(it){const n=!it;it=it||{cat:D.c[0]?.id,type:'',dur:'',price:0,unit:'',note:'',pub:1,ord:Math.max(0,...D.i.map(i=>i.ord))+10};
+md(`<form data-f="item" data-id="${it.id||''}"><h3>${n?'Add Product':'Edit Product'}</h3><p class="er" role="alert"></p>
+<label>Kategori / nama produk<select name="cat">${D.c.map(c=>`<option value="${c.id}"${c.id==it.cat?' selected':''}>${esc(c.name)}</option>`).join('')}<option value="_new">+ Kategori baru…</option></select></label>
+<label id="nc" hidden>Nama kategori baru<input name="ncat" maxlength="40"></label>
+<label>Jenis paket<input name="type" required maxlength="60" value="${esc(it.type)}"></label><label>Durasi<input name="dur" required maxlength="60" value="${esc(it.dur)}"></label>
+<fieldset><legend>Harga</legend><label class="in"><input type="radio" name="pm" value="n"${it.price==null?'':' checked'}> Harga tetap</label><label class="in"><input type="radio" name="pm" value="a"${it.price==null?' checked':''}> Tanya Admin</label><input name="price" type="number" min="0" step="1" inputmode="numeric" value="${it.price??''}" placeholder="20000"></fieldset>
+<label>Satuan harga (opsional, mis. verif)<input name="unit" maxlength="12" value="${esc(it.unit)}"></label><label>Catatan / ketentuan<textarea name="note" rows="3" maxlength="300">${esc(it.note)}</textarea></label>
+<div class="g2"><label>Status<select name="pub"><option value="1"${it.pub?' selected':''}>Aktif</option><option value="0"${it.pub?'':' selected'}>Nonaktif</option></select></label><label>Urutan<input name="ord" type="number" value="${it.ord}"></label></div>
+<div class="ac"><button type="button" class="btn o2" data-a="cancel">Cancel</button><button class="btn s">Save Product</button></div></form>`)}
+function catF(c){const n=!c;c=c||{name:'',desc:'',note:'',g:'',pub:1,ord:Math.max(0,...D.c.map(x=>x.ord))+10};
+md(`<form data-f="cat" data-id="${c.id||''}"><h3>${n?'Add Category':'Edit Category'}</h3><p class="er" role="alert"></p><label>Nama kategori<input name="name" required maxlength="40" value="${esc(c.name)}"></label><label>Deskripsi (opsional)<input name="desc" maxlength="120" value="${esc(c.desc)}"></label><label>Ketentuan kategori (opsional)<textarea name="note" rows="3" maxlength="300">${esc(c.note)}</textarea></label>
+<div class="g2"><label>Monogram (1–2 huruf)<input name="g" maxlength="2" value="${esc(c.g)}"></label><label>Urutan<input name="ord" type="number" value="${c.ord}"></label></div><label>Status<select name="pub"><option value="1"${c.pub?' selected':''}>Tampil</option><option value="0"${c.pub?'':' selected'}>Tersembunyi</option></select></label>
+<div class="ac"><button type="button" class="btn o2" data-a="cancel">Cancel</button><button class="btn s">Save Category</button></div></form>`)}
+document.onsubmit=e=>{e.preventDefault();const f=e.target,v=Object.fromEntries(new FormData(f)),k=f.dataset.f,id=f.dataset.id,er=m=>{f.querySelector('.er').textContent=m;f.querySelector('.er').scrollIntoView({block:'nearest'})};
+if(k=='item'){let cat=v.cat;if(cat=='_new'){const nm=v.ncat.trim();if(!nm)return er('Isi nama kategori baru.');if(D.c.some(c=>c.name.toLowerCase()==nm.toLowerCase()))return er('Nama kategori sudah ada.');cat=newCat(nm)}
+const t=v.type.trim(),d=v.dur.trim();if(!t||!d)return er('Jenis paket dan durasi wajib diisi.');let p=null;if(v.pm=='n'){p=Number(v.price);if(v.price===''||!Number.isFinite(p)||p<0)return er('Harga harus angka 0 atau lebih.');p=Math.round(p)}
+if(D.i.some(i=>i.id!=id&&i.cat==cat&&i.type.toLowerCase()==t.toLowerCase()&&i.dur.toLowerCase()==d.toLowerCase()))return er('Paket dengan jenis dan durasi yang sama sudah ada.');
+const o={cat,type:t,dur:d,price:p,unit:v.unit.trim(),note:v.note.trim(),pub:+v.pub,ord:Number(v.ord)||0};
+if(id)Object.assign(D.i.find(i=>i.id==id),o);else D.i.push({id:'n'+Date.now(),...o});cl();mark('Produk disimpan (draft). Tekan Publish changes agar tampil di katalog.')}
+if(k=='cat'){const nm=v.name.trim();if(!nm)return er('Nama kategori wajib diisi.');if(D.c.some(c=>c.id!=id&&c.name.toLowerCase()==nm.toLowerCase()))return er('Nama kategori sudah ada.');
+const o={name:nm,desc:v.desc.trim(),note:v.note.trim(),g:(v.g.trim()||nm.slice(0,2)),pub:+v.pub,ord:Number(v.ord)||0};if(id)Object.assign(D.c.find(c=>c.id==id),o);else D.c.push({id:uid(nm),...o});cl();mark('Kategori disimpan (draft).')}
+if(k=='set'){const s={};for(const x in v)s[x]=v[x].trim();let w=s.wa.replace(/\D/g,'');if(w[0]=='0')w='62'+w.slice(1);if(w.length<8||w.length>15)return er('Nomor WhatsApp tidak valid.');if(!/^https?:\/\//.test(s.tg))return er('Tautan Telegram harus diawali http:// atau https://');if(!s.name)return er('Nama toko wajib diisi.');D.s={...s,wa:w};mark('Pengaturan disimpan (draft).')}};
+const uid=n=>{let b=n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'c',x=b,k=1;while(D.c.some(c=>c.id==x))x=b+'-'+ ++k;return x};
+function newCat(nm){const id=uid(nm);D.c.push({id,name:nm,desc:'',note:'',g:nm.slice(0,2),pub:1,ord:Math.max(0,...D.c.map(x=>x.ord))+10});return id}
+document.onchange=e=>{if(e.target.name=='cat'){const h=e.target.value!='_new';$('#nc').hidden=h;if(!h)$('#nc input').focus()}if(e.target.id=='ac'){ac=e.target.value;$('#al').innerHTML=alist()}};
+document.oninput=e=>{if(e.target.closest('.mdl'))fd=1;if(e.target.id=='sq'){q=e.target.value;list()}if(e.target.id=='aq'){aq=e.target.value;$('#al').innerHTML=alist()}};
+document.onkeydown=e=>{if(e.key=='Escape'&&$('#ov').innerHTML)act('cancel')};
+document.onclick=e=>{const t=e.target.closest('[data-a]');if(t)act(t.dataset.a,t.dataset.id,t)};
+function swap(id,d){const cs=[...D.c].sort(by),k=cs.findIndex(c=>c.id==id),j=k+d;if(j<0||j>=cs.length)return;cs.forEach((c,x)=>c.ord=x*10);[cs[k].ord,cs[j].ord]=[cs[j].ord,cs[k].ord];mark('Urutan diubah (draft).')}
+function act(a,id,el){const it=D.i.find(i=>i.id==id),c=D.c.find(x=>x.id==id);
+if(a=='mm'){const o=$('.hd').classList.toggle('o');el.setAttribute('aria-expanded',o)}
+else if(a=='chip'){cf=id;chips();list()}
+else if(a=='nav'){av=id;if(id=='ad')av='mg';render();if(id=='ad')itemF()}
+else if(a=='cancel'){if(fd&&!confirm('Buang perubahan yang belum disimpan?'))return;cl()}
+else if(a=='ex')location.hash='#home';else if(a=='vf')chk(1);
+else if(a=='ia')itemF();else if(a=='ie')itemF(it);else if(a=='ca')catF();else if(a=='ce')catF(c);
+else if(a=='it'){it.pub=it.pub?0:1;mark(it.pub?'Paket diaktifkan (draft).':'Paket dinonaktifkan (draft).')}
+else if(a=='ct'){c.pub=c.pub?0:1;mark('Status kategori diubah (draft).')}
+else if(a=='cu')swap(id,-1);else if(a=='cd')swap(id,1);
+else if(a=='id')md(`<h3>Delete this product?</h3><p>Produk ini akan dihapus dari katalog. Tindakan ini tidak dapat dibatalkan.</p><div class="ac"><button class="btn o2" data-a="cancel">Cancel</button><button class="btn dg2" data-a="dx" data-id="${id}">Delete Product</button></div>`);
+else if(a=='dx'){D.i=D.i.filter(i=>i.id!=id);cl();mark('Produk dihapus (draft).')}
+else if(a=='cx'){const n=D.i.filter(i=>i.cat==id).length;md(`<h3>Delete category “${esc(c.name)}”?</h3><p>${n?`Kategori ini masih punya ${n} produk. Pindahkan produk ke kategori lain lebih dulu (lewat Edit), atau hapus kategori beserta semua produknya.`:'Kategori kosong ini akan dihapus. Tindakan ini tidak dapat dibatalkan.'}</p><div class="ac"><button class="btn o2" data-a="cancel">Cancel</button><button class="btn dg2" data-a="cdx" data-id="${id}">${n?`Delete category + ${n} products`:'Delete Category'}</button></div>`)}
+else if(a=='cdx'){D.i=D.i.filter(i=>i.cat!=id);D.c=D.c.filter(x=>x.id!=id);if(cf==id)cf='all';if(ac==id)ac='all';cl();mark('Kategori dihapus (draft).')}
+else if(a=='pub')pub(el)}
+async function pub(b){b.disabled=1;b.textContent='Publishing…';try{art=art||await claude.use('artifact');if(!art)throw{code:'na'};const c=document.documentElement.cloneNode(true);c.querySelector('#data').textContent=ser();['app','ov','toast'].forEach(i=>{const n=c.querySelector('#'+i);n.innerHTML='';n.removeAttribute('class')});c.removeAttribute('data-theme');dirty=0;await art.publish('<!doctype html>\n'+c.outerHTML)}
+catch(e){dirty=1;b.disabled=0;b.textContent='Publish changes';toast(e&&(e.code=='not_writer'||e.code=='not_granted')?'Kamu tidak punya izin mempublikasikan perubahan.':e&&e.code=='conflict'?'Ada versi yang lebih baru; halaman akan dimuat ulang.':e&&e.code=='na'?'Fitur publish tidak tersedia di tampilan ini.':'Gagal menyimpan. Coba lagi.',1)}}
+async function chk(m){try{const u=await window.claude?.use?.('user');can=!!(u&&u.canEdit())}catch(e){can=0}render();if(m&&!can)toast('Akun ini tidak punya akses admin.',1)}
+function render(){adm=location.hash=='#admin';$('#app').innerHTML=adm?ap():pg();if(!adm){chips();list()}}
+onhashchange=()=>{if((location.hash=='#admin')!=adm){render();scrollTo(0,0)}};
+onbeforeunload=e=>{if(dirty){e.preventDefault();e.returnValue=''}};
+render();chk(0);
+</script>
+
+
+</body></html>
