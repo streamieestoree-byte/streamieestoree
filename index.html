@@ -103,7 +103,7 @@ const by=(a,b)=>a.ord-b.ord,rp=n=>'Rp'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g
 const tag=(t,ps)=>/^sharing/i.test(t)?'SHARING':/^private/i.test(t)?'PRIVATE':/^famplan/i.test(t)?'FAMPLAN':/^indplan/i.test(t)?'INDPLAN':ps.every(p=>p==null)?'ASK ADMIN':'';
 const price=r=>r.price==null?'Tanya Admin':rp(r.price)+(r.unit?'/'+esc(r.unit):'');
 /* ---------- public ---------- */
-function row(c,r,sh){const a=r.price==null,m=a?`Halo admin ${D.s.name}! Aku mau tanya harga dan ketersediaan ${c.name} paket ${r.type}.`:`Halo admin ${D.s.name}! Aku mau tanya tentang ${c.name}, paket ${r.type}, durasi ${r.dur}. Apakah masih tersedia?`;
+function row(c,r,sh){const a=r.price==null,m=a?`haloo, kak ri! aku mau tanya harga dan ketersediaan ${c.name} paket ${r.type}.`:`haloo, kak ri! aku mau tanya tentang ${c.name}, paket ${r.type}, durasi ${r.dur}. apakah masih ready?`;
 return `<div class="r"><span class="d">${esc(r.dur)}</span><b class="p${a?' ak':''}">${price(r)}</b><a class="b" href="${wa(m)}" target="_blank" rel="noopener" aria-label="${a?'Tanya admin':'Order via WhatsApp'}: ${esc(c.name+' '+r.type+' '+r.dur)}">${a?'Ask Admin':'Order'}</a>${!sh&&r.note?`<p class="n">${esc(r.note)}</p>`:''}</div>`}
 function card(c,its){const G=new Map();its.forEach(i=>{if(!G.has(i.type))G.set(i.type,[]);G.get(i.type).push(i)});
 let h=`<article class="cd"><div class="hh"><span class="gly" aria-hidden="true">${esc(c.g)}</span><h3>${esc(c.name)}</h3></div>${c.desc?`<p class="gn">${esc(c.desc)}</p>`:''}${c.note?`<p class="im"><b>✶ Ketentuan</b>${esc(c.note)}</p>`:''}`;
@@ -112,7 +112,7 @@ function list(){const t=q.toLowerCase().split(/\s+/).filter(Boolean);let h='';
 [...D.c].sort(by).filter(c=>c.pub&&(cf=='all'||cf==c.id)).forEach(c=>{let its=D.i.filter(i=>i.cat==c.id&&i.pub).sort(by);
 if(t.length)its=its.filter(i=>{const s=(c.name+' '+c.note+' '+i.type+' '+i.dur+' '+i.note+' '+(i.price==null?'tanya admin':rp(i.price)+' '+i.price)+' '+i.unit).toLowerCase();return t.every(w=>s.includes(w))});
 if(its.length)h+=card(c,its)});
-$('#list').innerHTML=h||`<div class="em"><p>Couldn’t find it? Try another search or ask our admin.</p><a class="btn s" target="_blank" rel="noopener" href="${wa(q?`Halo admin ${D.s.name}! Aku cari "${q}" tapi belum ketemu di katalog. Apakah tersedia?`:`Halo admin ${D.s.name}! Aku mau tanya tentang produk yang tersedia.`)}">Ask Admin on WhatsApp</a></div>`}
+$('#list').innerHTML=h||`<div class="em"><p>Couldn’t find it? Try another search or ask our admin.</p><a class="btn s" target="_blank" rel="noopener" href="${wa(q?`haloo, kak ri! aku cari "${q}" tapi belum ketemu di katalog. apakah masih ready?`:`haloo, kak ri! aku mau tanya tentang produk yang tersedia.`)}">Ask Admin on WhatsApp</a></div>`}
 function chips(){$('#chips').innerHTML=[['all','All'],...[...D.c].sort(by).filter(c=>c.pub).map(c=>[c.id,c.name])].map(([i,n])=>`<button class="cp${cf==i?' on':''}" aria-pressed="${cf==i}" data-a="chip" data-id="${esc(i)}">${esc(n)}</button>`).join('')}
 function pg(){const s=D.s,W=`https://wa.me/${s.wa}`;return `
 <header class="hd"><div class="w"><a class="br" href="#home">${esc(s.name)} <i>✶</i></a><button class="mm" data-a="mm" aria-expanded="false" aria-controls="nv">Menu</button>
